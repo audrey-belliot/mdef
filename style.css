@@ -28,6 +28,8 @@ font-size: 20px;
 font-weight: light;
 text-decoration: underline;
 text-decoration-color: #EF489E;
+margin-top:20px;
+
 
 
 }
@@ -35,4 +37,8 @@ text-decoration-color: #EF489E;
 .bg-pink
 {
   background-color: #EF489E;
+}
+
+.contentweek .row {
+  margin-top: 10px;
 }
