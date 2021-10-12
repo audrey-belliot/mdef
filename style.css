@@ -1,125 +1,38 @@
 /* style.css by Audrey Belliot */
 
-body
-{
-    background-color: #FCD2EE;
-    color: black;
-    font-size: 15px;
-    font-family: "Trebuchet MS","Sans Serif";
-    margin: 0px; /* Marge extérieure*/
-
+* {
+  font-family: "Trebuchet MS","Sans Serif";
 }
 
-p {
-  margin: 20px; /* Marge extérieure*/
-  width: 70%;
-
+body {
+    background-color: white;
+    margin:0;
 
 }
 
 h1
 {
-  font-size:26px;
-  font-family: "Trebuchet MS","Sans Serif";
-  margin: 20px; /* Marge extérieure*/
-
+font-size: 50px;
 }
-
 
 h2
 {
-    font-size:20px;
-    font-family: "Trebuchet MS","Sans Serif";
-    margin: 20px; /* Marge extérieure*/
+  font-size: 20px;
+  margin-bottom:40px;
+  font-weight: lighter;
 }
 
 h3
 {
-    font-size:18px;
-    font-family: "Trebuchet MS","Sans Serif";
-    margin: 20px; /* Marge extérieure*/
+font-size: 20px;
+font-weight: light;
+text-decoration: underline;
+text-decoration-color: #EF489E;
+
+
 }
 
-.week
+.bg-pink
 {
-  border: 3px black solid;
-  box-shadow: 4px 4px 0px black;
-  width: 60px;
-  height: 60px;
-  padding: 12px; /*marge intérieure*/
-  margin: 20px; /* Marge extérieure*/
-  text-align: center;
-}
-
-em {
-font-weight: bold;
-font-style: normal;
-
-}
-
-a:visited
-{
-    color: #262C26;
-}
-
-
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  font-family: "Trebuchet MS","Sans Serif";
-
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #FE99DC;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-.floatimage
-{
-    float: left;
-    margin: 10px; /* Marge extérieure*/
-
+  background-color: #EF489E;
 }
