@@ -2,43 +2,58 @@
 
 * {
   font-family: "Trebuchet MS","Sans Serif";
+  font-size: 15px;
+
 }
 
 body {
     background-color: white;
     margin:0;
-
 }
 
-h1
-{
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: #EF489E;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+}
+
+h1 {
 font-size: 50px;
 }
 
-h2
-{
+h2 {
   font-size: 20px;
   margin-bottom:40px;
   font-weight: lighter;
 }
 
-h3
-{
+h3 {
 font-size: 20px;
 font-weight: light;
 text-decoration: underline;
 text-decoration-color: #EF489E;
 margin-top:20px;
-
-
-
 }
 
-.bg-pink
-{
+strong {
+  font-style: normal;
+  font-weight: bold;
+}
+
+em{
+  font-style: normal;
+  font-weight: lighter;
+  color: #9B9B9B;
+}
+
+.bg-pink {
   background-color: #EF489E;
-}
-
-.contentweek .row {
-  margin-top: 10px;
 }
