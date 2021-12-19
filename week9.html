@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>seminars - week 5</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+
+<body>
+<div class=bg-pink>
+      <div class="container">
+        <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="index.html">audrey</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="navbarContent" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="about.html">about</a></li>
+              <li class="nav-item"><a class="nav-link active" href="seminars.html">seminars</a></li>
+           </ul>
+           </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1>extended intelligences <em>(1/2)</em></h1>
+        <h2>30th of November to 3rd of December 2021</h2>
+        <h4>faculty: Taller Estampa (Pau Artigas, Daniel Pitarch Fernández)</h4>
+     </div>
+   </div>
+
+
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3>week reflections</h3>
+            <p>
+          The classes of the first week of this seminar were given by <a href="https://tallerestampa.com/">Taller Estampa</a> which is a collective of artists mainly coming from the film industry.
+
+            <br><br>They introduced Artificial Intelligence as <strong>one of the tools</strong> they use. We started the seminar questionning the words we use for AI : what do we mean when we refer to an intelligent machine? It brought up relfections around the metaphores we use to describe machine features : "a machine that sees", "a machine that think". What does it mean to see and to think?
+
+            <br><br>The objective of the class was for us to have a global understanding of how AI works and demystify the tools used.
+
+            <br>We were introduced the different automatization steps (from AI to Machine Learning to Deep learning) and also to the concepts of neural nets, datasets, neural nets training.
+
+
+          </p>
+          <p><img src="images/week9/tallerestampa_bis.jpg" alt="tallerestampa_project" class="img-fluid"/></a></p>
+
+        </div>
+
+        <div class="col-12 col-md-6">
+          <p>The neural nets that are used in AI based projects are usually <strong>created by research teams and a lot of them can be used open source</strong>. Of course it raises many questions of copyrighting around this kind of projects and there is not a clear answer to these today.
+
+          <br><br>These neural networks are trained, which means they "self configure" based on sample data -datasets- that we provide them. Here again, a lot of datasets and trainings already exist in almost every topic. A good resource to find them is <a href="http://paperswithcode.com">Paper with code</a> which is a library of research papers that also share code, neural nets, datasets...
+          <br>Many neural networks are accessible via "Colabs" a tool developed by Google that mixes code and text and unables you to run programs from your computer using remote GPUs and TPUs.
+
+          <br><em>I think this idea that there is a large community behind it and that a lot of resources are available changed my perception on Machine Learning and made it much more accessible and understandable.</em>
+
+          <br><br><em>More generally, Taller Estampa shared with us a lot of reference projects from many different sectors including creative and artistic projects and I really appreciated this point of view!
+
+          <br><br>I worked in an innovation environnment before joining MDEF. In the collective where I worked, we organized "datathons" mixing teams of data scientists and designers for example to help hospitals anticipate the number of patients and peaks of patients at some specific moments of the year based on data from many differents sources (google searches, weather forecast, events...).
+
+          So even if the potential of solving important social problems with solutions using data and AI was very clear to me, it seemed like a tool only data scientists were able to use. I was seeing it more like a black box.
+          <br>Concerning more ethical questions, <a href="https://algorithmwatch.org/en/">Algorithm Watch</a> is one of the resources Taller Estampa shared with us which interested me a lot, it asseses systems based on AI and their implication on the society.</em>
+
+
+
+          </p>
+
+        </div>
+
+        </div>
+
+
+
+        <div class="row">
+
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <br>
+            <h3>explorations</h3>
+            <p>
+            <strong>image organization</strong> All the class contributed to collect 200 images each : 100 of the last images of our phones and 100 images of Poblenou (at the same time modern and anciant Poblenou). Pau and Daniel trained a neural net based on these datasets during 2 days and we where then able to explore the image organization that resulted from this.
+            <br><em>It was interesting to see some the organization "decided" by the network of pictures we would have not thought of putting together and trying to guess what characteristics could have been chosen.</em>
+
+            <br><br>The results can be seen here :
+            <br><a href="https://tallerestampa.com/treballs/MDEF/phone.html">Phone pictures</a>
+            <br><a href="https://tallerestampa.com/treballs/MDEF/poblenou.html">Poblenou Past and Present</a>
+
+
+        </div>
+
+        <div class="col-12 col-md-6">
+          <br>
+          <p><img src="images/week9/photoorganization.jpg" alt="phone pictures organized" class="img-fluid"/></a></p>
+
+
+        </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+          <strong>image generation and research in the latent space</strong> We used a Colab prepare by Taller Estampa based on neural nets Styelgan2-ADA and CLIP to generate faces and research into the latent space. We explored and generated various images, they were all faces because the training we downloaded was for face generation.
+
+
+
+        </div>
+
+        <div class="col-12 col-md-6">
+I uploaded a picture of me and run the research in the latent space, below are the different steps in the research (from right to left). The result was at the same time getting close to the original picture but also a bit scary.
+
+        </div>
+
+        </div>
+
+        <div class="row">
+          <p><img src="images/week9/audrey.jpg" alt="audrey latent space" class="img-fluid"/></a></p>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+          Another way to research into the latent space was by using keywords. Here the results were quite surprising. See here an example of what I found when searching for "intelligent woman" versus the research "crazy woman". I had to change start from a different seed for the second search because the results were always showing an old man.
+
+            <br><br>We were also introduced to the steps to create a simple deepfake using a video of the movement we want to reproduce and an image that will be applied to the video.
+            <br><br>Taller Estampa shared with us various Colabs for us to continue exploring and testing.
+          <br><br>
+
+        </div>
+
+        <div class="col-12 col-md-6">
+          <p><img src="images/week9/research_latentspace.jpg" alt="research latent space" class="img-fluid"/></a></p>
+
+
+        </div>
+
+        </div>
+
+
+        <div class="row bg-light">
+          <div class="col-12 col-md-6">
+
+          <h3>speculative project</h3>
+At the end of the week we worked in groups on a speculative project that would use Machine Learning. With my group, we came up with the idea of a tool that would generate original recipes with local ingredients, we called it Recip.AI.
+<br>When doing research about it, we found that a lot of datasets of recipes around the world were already available as well as local ingredients for all regions. The tool would generate the text of an original recipe and generate an image of the recipe based on the text of the ingredients. We did some tests of how the recipes images could look like using a colab based on VQGAN+CLIP neural network and ImageNet_16384 dataset and it gave us quite surprising results!
+
+          <br>It was great to see this as an exploration and questionning about food and how we can rethink and see recipes in a creative and unexpetcted way.
+          <br><br><em><a href="https://docs.google.com/presentation/d/1AcBtppGWPzU09qMTcFsZGeAnPbZPjlrZ8ooSP1Ciiyc/edit?usp=sharing">The presentation of our project is visible here.</a></em>
+          <br><br><br>
+        </div>
+
+      <div class="col-12 col-md-6">
+        <br>
+        <p><img src="images/week9/recip.ai.png" alt="recip.ai speculative project" class="img-fluid"/></a></p>
+
+    </div>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+    <footer>
+      <p></p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
