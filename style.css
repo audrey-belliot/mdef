@@ -64,3 +64,6 @@ em{
 .bg-pink {
   background-color: #EF489E;
 }
+
+hr {
+  border: 4px solid pink;
