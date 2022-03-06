@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>fabacademy w4</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+
+<body>
+<div class=bg-pink>
+      <div class="container">
+        <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="index.html">audrey</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="navbarContent" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="about.html">about</a></li>
+              <li class="nav-item"><a class="nav-link active" href="seminars.html">seminars</a></li>
+              <li class="nav-item"><a class="nav-link active" href="fabacademy.html">fabacademy</a></li>
+
+           </ul>
+           </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1>electronics production</h1>
+        <h2>fab academy week 4</h2>
+
+     </div>
+   </div>
+
+
+
+        <div class="row">
+          <div class="col-12">
+
+<br><br>This week was about electronics production (<a href="https://fablabbcn-projects.gitlab.io/learning/fabacademy-local-docs/material/week04/">class content here</a>).
+
+We learnt about the materials used to create PCBs (Printed Circuit Boards), the different types of PCBs with one or multiple layers and the fabrication techniques.
+For the material, in the fab lab we use FR1 which is paper based and has also resin because it is more natural, low cost and easy to make single layer PCBs.
+
+
+
+        </div>
+
+        <div class="col-12">
+
+
+        </div>
+
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3>cutting</h3>
+
+          To fabricate the PCB we use a milling machine, the one we have at Fab Lab BCN is Roland MonoFab SRM-20.
+          The file has to be prepared before in a software developped by MIT, <a href="http://modsproject.org/">modsproject</a> and the outputs are 2 files : one for the traces and one for the outline.
+          <br><br>I know it is not supposed to be the highlight of this class but I really like the interface and non conventional navigation on modsproject.
+
+          <h3>soldering</h3>
+
+          The soldering part reminded me the technology classes in secondary school I remember I enjoyed it a lot. I think at that time I could do perfect solderings of LEDs so I lost this skill now!
+
+          In the class content there is a <a href="https://www.youtube.com/watch?v=vIT4ra6Mo0s">great vintage video</a> that explains how to make good solderings I find.
+
+          I soldered led and resistors on one of the PCB that were already fabricated.
+
+          <br><br>mistakes I made:
+          <ul>
+          <li>I soldered one LED in the wrong side because I forgot they had a negative side. So I need to remember that a green line or a dot are always indicating the side negative (connected to ground)</li>
+          <li>I tried to remove the LED using a copper wire to remove the solder but it broke the trace. It is better to first remove the element just by melting the solder with the tip of the iron and use the copper only after, on a flat board to remove excess of solder.</li>
+          </ul>
+
+          I tested the connections with a multimeter, and after with a power supply to light the LEDs. It worked but I think I still need to train on the soldering as the solders were not all shiny as they should be!
+
+          <br><br>Compared with the previous weeks where we could directly have a tangible result, here Electronics production is more like a step amongst others in the process of making an electronic object later. Actually I am wondering why we didn’t do electronics design before so we could have cut the board we designed.
+          <br><br>
+
+
+          </div>
+          <div class="col-12 col-md-6">
+            <p><br><br><img src="images/term2/fabacademy/fab_w4/modsproject_xs.jpg" alt="files for milling" class="img-fluid"/></a></p>
+            <p><br><br><img src="images/term2/fabacademy/fab_w4/soldering_xs.jpg" alt="soldering" class="img-fluid"/></a></p>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+
+
+
+        </div>
+        <div class="col-12 col-md-6">
+
+      </div>
+    </div>
+
+        <div class="row bg-light">
+          <div class="col-12 col-md-3">
+            <h3>tools I worked with</h3>
+            Iron
+            <br>solder
+            <br>multimeter
+            <br>power supply
+            <br><br>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <h3>learnings</h3>
+<ul>
+    <li>Inverting the colors in mods to be sure we are keeping the black part</li>
+    <li>Offsetting to remove copper around the trace only to save time on the machine</li>
+    <li>Green line or a dot on an LED are always indicating the side negative (connected to ground)</li>
+   <li>To remove an element soldered on a PCB, first remove the element just by melting the solder with the tip of the iron and use the copper only after, on a flat board to remove excess of solder</li>
+</ul>
+
+
+        </div>
+      </div>
+      </div>
+
+
+    </div>
+
+    <br><br>
+    <div id="wcb" class="carbonbadge"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <br><br>
+
+    <footer>
+      <p></p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
