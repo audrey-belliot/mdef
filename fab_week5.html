@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>fabacademy w5</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+
+<body>
+<div class=bg-pink>
+      <div class="container">
+        <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="index.html">audrey</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="navbarContent" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="about.html">about</a></li>
+              <li class="nav-item"><a class="nav-link active" href="seminars.html">seminars</a></li>
+              <li class="nav-item"><a class="nav-link active" href="fabacademy.html">fabacademy</a></li>
+
+           </ul>
+           </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1>3D printing and scanning</h1>
+        <h2>fab academy week 5</h2>
+
+     </div>
+   </div>
+
+
+
+        <div class="row">
+          <div class="col-12">
+
+<br><br>
+This week’s fabacademy topic was 3D printing, the more appropriate term is “additive manufacturing” (<a href="https://fablabbcn-projects.gitlab.io/learning/fabacademy-local-docs/material/week05/">class content here</a>). We talked about the history of 3D printing and the different techniques we can use. The technology actually existed since the 80’ but because of patents, it remained closed until around 2005. At that moment, open source projects (cf MakerBot) started to emerge to give access to this technology to individuals. It is quite impressive to see how the technology has evolved and how we can now even print organic material like tissues and cells.
+
+<br><br>In the fab lab we can use PLA and resin 3D printers. Another technique I would really like to try is the paste printing. Some machines exist to do it but are quite expensive. Eduardo was showing 2 paste printers they made at FabLab BCN hacking a Ender 3 Creality printer by adding 3D printed parts. To run it we need to generate the gcode with Grasshopper so I think this is what motivated me to start learning how to use Grasshopper.
+
+<br><br>We also saw this week how to 3D scan. One of the techniques is photogrametry which consists in taking a lot of pictures from different angles of the object we want to scan and after use a software for 3D reconstruction (for example <a href="https://alicevision.org/">Meshroom / AliceVision</a> which is open source). Another technique is light and sensors 3D scanning and we were able during the class to use a kinnect to scan objects or people.
+
+
+
+        </div>
+
+        <div class="col-12">
+
+
+        </div>
+
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3>designing</h3>
+
+
+            The task of the week was to 3D print an object we designed. I spent some time deciding if I wanted to make something useful but not necessarily involving a lot of new skills OR make something useless just to try new programs and features. In the end my choice went to making something useless to try Grasshopper.
+            <br>I found Grasshopper very cool. I wish I had been exposed to such a visual tool before. Even though my background is not in design, I studied mathematics a lot at the beginning of my studies and I feel like it is a real lack not to use visual tools like this one.
+
+            <br><br>The last two weeks I was happy with Fusion 360 as it seemed easy to understand but now that I see Grasshopper interface I might change my mind! It is just a lot of information and training because they both are completely new to me this year.
+
+            <br><br>Tutorials I followed:
+<ul>
+    <li><a href="https://www.youtube.com/watch?v=zDDVeDldvaI">This one for the basics of using Grasshopper</a></li>
+    <li><a href="https://www.youtube.com/watch?v=395IBGa2Y9I">And this one for the object I made, it is initially for a ring but I changed the dimensions to make earrings</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+          </div>
+          <div class="col-12 col-md-6">
+            <p><br><br><img src="images/term2/fabacademy/fab_w5/3Ddesign.jpg" alt="3D design" class="img-fluid"/></a></p>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h3>printing</h3>
+
+          <strong>Fused Deposition Modelling (FDM)</strong>
+          <br>I first used Ender 3 printer to print one earring just to test. Before printing I need to open the stl file in a slicer program, here with Cura to define different parameters such as the support it needs (usually an object needs support from 45° inclination), the quality, the percentage of filling (20% is enough most of the time), the temperature (that we can find on the material datasheet)...
+
+          <br><br>The slicer program creates a gcode file with a set of instructions for the machine, we save it on a sd card that we can insert in the printer.
+
+          <br>The printing time was 1h23 for one earring. The result was nice but with some holes at the bottom probably because the bed was a bit too close to the nozzle, that could be solved by levelling the bed.
+
+          <br><br><strong>Stereolithography (SLA)</strong>
+          <br>I did a second experiment of printing the same earrings but with resin this time to have a better result. Edouardo helped Fiorella and me preparing the file and the machine.
+
+          <br><br>The resin printing is a completely different technique, the material (resin) is in a bed at the bottom with a screen that solidifies the resin with light is and the bed is at the top going up and down. The printing time here was about 6 hours. We fitted on the same plate Fiorella’s and my objects to optimize the printing time.
+
+          <br><br>The quality was great in the end, but there were many additional steps compared to the PLA printer. We had to clean the objects from excess of resin in alcohol in a ultrasonic cleaner for 5 minutes and after that put it in some sort of microwave that hardens the resin with UV light during 15 minutes. An alternative is to leave it in the sun.
+
+          <br><br><strong>Next experiments</strong>
+
+          Now the next experiment I would like to do is the paste extrusion with the hacked Ender 3. I want to use some of the waste we collected during the biomaterials seminar so I am looking for recipes using coffee grounds and beer spent grains.
+
+          I want to find more inspirations of 3D printed projects to see all the potential of it including at a large scale for furniture or even for contruction similarly to the walls the students in Valldaura did this year with clay that they harvested there.
+
+
+
+
+        </div>
+        <div class="col-12 col-md-6">
+          <p><br><br><img src="images/term2/fabacademy/fab_w5/3Dprint.jpg" alt="3D print" class="img-fluid"/></a></p>
+          <p><br><br><img src="images/term2/fabacademy/fab_w5/result.jpg" alt="3D earrings" class="img-fluid"/></a></p>
+
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-12">
+    <br><br>
+
+      </div>
+</div>
+
+        <div class="row bg-light">
+          <div class="col-12 col-md-3">
+            <h3>tools I worked with</h3>
+            Rhino
+            <br>Grasshopper
+            <br>Ender 3 printer (Creality)
+            <br>Formlabs resin printer
+            <br>ultrasonic cleaner
+
+            <br><br>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <h3>learnings</h3>
+<ul>
+    <li>Make sure that the file you want to send for printing doesn’t have any gap and all surfaces are connected</li>
+    <li>Check the bed levelling before using the 3D printers</li>
+</ul>
+
+
+        </div>
+      </div>
+      </div>
+
+
+    </div>
+
+    <br><br>
+    <div id="wcb" class="carbonbadge"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <br><br>
+
+    <footer>
+      <p></p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
