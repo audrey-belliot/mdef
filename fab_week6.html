@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>fabacademy w6</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+
+<body>
+<div class=bg-pink>
+      <div class="container">
+        <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="index.html">audrey</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="navbarContent" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="about.html">about</a></li>
+              <li class="nav-item"><a class="nav-link active" href="seminars.html">seminars</a></li>
+              <li class="nav-item"><a class="nav-link active" href="fabacademy.html">fabacademy</a></li>
+
+           </ul>
+           </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1>electronics design</h1>
+        <h2>fab academy week 6</h2>
+
+     </div>
+   </div>
+
+        <div class="row">
+        <div class="col-12">
+
+<br><br>
+This week class was about Electronic Design, the class content can be found <a href="https://fablabbcn-projects.gitlab.io/learning/fabacademy-local-docs/material/week06/">here</a>.
+<br>For this week assignment I am going to make a PCB for my ESP32 Huzzah board for sensors to measure temperature so I can use it to check the performance of the low tech experiments we are making (solar oven and fireless cooker).
+
+<br><br>We have two types of temperature sensors at the fablab : NTC and RTD. I am going to use a NTC thermistor (Negative Temperature Coefficient Thermistor - they are thermally sensitive resistors and have are decreasing in resistance as temperature increases).
+
+<br><br>The circuit I want to make should have 2 thermometers and 2 RGB LEDs that will change color depending on the temperature.
+<ul>
+<li>One to measure the temperature inside the solar oven</li>
+<li>The second one to measure the outside temperature</li>
+</ul>
+
+<h3>prototype on breadboard</h3>
+
+I started to test the termistor wiring on my breadboard with the ESP32 microcontroller. I used a few online tutorials to find out the right wiring.
+
+NTC thermistors need to be wired with a resistor to make a voltage divider. NTC resistance decreases as the temperature rises. The Steinhart-Hart equation enables to use this data to derive temperature.
+
+<br>I used the following library to calculate and display the temperature on my monitor. <a href="https://www.arduinolibraries.info/libraries/thermistor">Link to the library</a>
+
+<br><br>I then added some code to change the color of the LED when the temperature is over 20°C. I will use different limits when it will be for the oven but here it was just to try it.
+
+<br><a href="fabacademy\electronics design\Test_thermistor_audrey_2\Test_thermistor_audrey_2.ino">Link to the file with the code</a>
+
+
+        </div>
+
+        <div class="col-12">
+
+
+        </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+
+
+
+          </div>
+          <div class="col-12 col-md-6">
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h3>schematic</h3>
+
+          Once the prototype on the breadboard was working, I made the schematic of the wiring on Kicad. We had downloaded before the librairies of components available at FabLab BCN.
+
+          <br><br>I duplicated the combination “voltage divider : thermistor + resistor” to have one for the oven and one for the exterior.
+          As the thermistor for the oven would need to be placed inside without putting the whole board in the oven, I changed one of the thermistor for a two pins connector so I will then be able to attach a thermistor to a longer cable that can be placed in the oven.
+
+          <br><br>To make it visually clear, I grouped the connexions into frames (oven sensor, exterior sensor, jumper) and added labels on each wire to represent the connexions between the elements and the micro-controller pins.
+
+          <br><br>The next step is to generate the netlist from the schematic. Then open the netlist in PCB layout editor on Kicad.
+          <br><a href="fabacademy\electronics design\PCB schematic and layout\PCB_audrey.sch">Link to my PCB schematic</a>
+
+
+
+
+        </div>
+        <div class="col-12 col-md-6">
+          <p><br><br><img src="images/term2/fabacademy/fab_w6/schematic.jpg" alt="PCB schematic" class="img-fluid"/></a></p>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>physical layout</h3>
+
+        Once I am on the layout editor, the component have connexions that has been automatically generated from the schematic but I need to place them on the board shield to have the most simple circuit possible and avoid circuits to cross.
+
+        Some people even do “PCB art”, use patterns etc...
+
+        <br><br>After moving the components everywhere, I finally found a way to minimize the length of the connexion circuits. I still had two circuits that were crossing so I went back to the schematics and added a resistor that will be 0 ohm to make a jumper as I couldn’t avoid some of the lines to cross.
+
+        At the end, I created the lines of the outside of the shield and exported it.
+        <br><a href="fabacademy\electronics design\PCB schematic and layout\PCB_audrey.kicad_pcb">Link to my PCB layout</a>
+</div>
+
+<div class="col-12 col-md-6">
+  <p><br><br><img src="images/term2/fabacademy/fab_w6/layout.jpg" alt="PCB layout" class="img-fluid"/></a></p>
+
+</div>
+</div>
+
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>prepare for milling</h3>
+
+        Last step before milling is to prepare the files. I opened the PCB layout from Kicad in Inkscape and separated it into 3 files that have different setup for milling: the holes, the circuit and the outline.
+
+        <br><br>It is important to save them with 1000 ppp quality and use custom export to always keep the same size.
+
+        <br><br>When the files were ready, I used MODS to enter the parameters needed for every file, then I saved them to be able to open them with the program of the milling machine.
+
+
+
+        <h3>milling</h3>
+
+        <em>Note: This part is also related to a previous week class “Electronic production”.</em>
+
+        <br><br>Here are the steps I followed:
+        <ul>
+        <li>Tape the PCB with double sided tape</li>
+        <li>Open Vpanel for SRM-20</li>
+        <li>Place the endmill 1/64 to cut the traces first (be very careful not to make it fall as it is super fragile)</li>
+        <li>Place the endmill at the bottom left corner of the board with x and y, then lower the z</li>
+        <li>Let endmill “fall” on the board (using the finger to go slow) and screw again</li>
+        <li>Set Origin Poin XY and Z</li>
+        <li>Press Cut on the program and select the right file</li>
+      </ul>
+      </div>
+      <div class="col-12 col-md-6">
+        <p><br><br><img src="images/term2/fabacademy/fab_w6/setup.jpg" alt="milling setup" class="img-fluid"/></a></p>
+        <p><br><br><img src="images/term2/fabacademy/fab_w6/milling.jpg" alt="PCB milling" class="img-fluid"/></a></p>
+
+      </div>
+          </div>
+
+
+    <div class="row">
+      <div class="col-12">
+
+
+      </div>
+</div>
+
+        <div class="row bg-light">
+          <div class="col-12 col-md-3">
+            <h3>tools I worked with</h3>
+            Kicad
+            <br>Inkscape
+            <br>modsproject
+            <br>Roland SRM-20
+
+            <br><br>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <h3>learnings</h3>
+<ul>
+    <li>Don't forget to flip the board shape in Kicad PCB layout editor as it is going to be placed on top of the ESP board</li>
+    <li>Make sure lines don't cross when creating the layout
+    <li>After cutting clean the board with a metal “brush” and then with alcohol</li>
+</ul>
+
+
+        </div>
+      </div>
+      </div>
+
+
+    </div>
+
+    <br><br>
+    <div id="wcb" class="carbonbadge"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <br><br>
+
+    <footer>
+      <p></p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
