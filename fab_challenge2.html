@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>fabacademy c2</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+
+<body>
+<div class=bg-pink>
+      <div class="container">
+        <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="index.html">audrey</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="navbarContent" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="about.html">about</a></li>
+              <li class="nav-item"><a class="nav-link active" href="seminars.html">seminars</a></li>
+              <li class="nav-item"><a class="nav-link active" href="fabacademy.html">fabacademy</a></li>
+
+           </ul>
+           </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1>making a solar dehydrator</h1>
+        <h2>fab academy micro challenge #2</h2>
+
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-12">
+       <br><br>The second challenge was to develop an artifact that “allows to explain our project to others” or “interact with others so they understand our research project”. We could use the skills from the previous fab academy classes including: 3D scanning and printing, electronics design, computer controlled machining (here CNC milling), embedded programming.
+
+     <br><br>To continue on the low tech exploration that we started with Gerda, we wanted to create a solar dehydrator to experiment with this method for food preservation without using energy. Julia and Fiorella had also started investigating about dehydrators but not solar and Roberto wanted to make an incubator.
+
+     <br><br>We decided to team up and make a hydrid object made of different boxes. We liked the idea of making a modular device and the multipurposes of the solar capture module.
+
+     <br>In the future, other people could create other projects that need solar heating for example and that could just be nested on top of the solar capture module. We could imagine a collection of these boxes, each having their own function and that could be used independently.
+
+     </div>
+   </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+
+<br><br><strong>Elements of the hydrid dehydrator/incubator</strong>
+
+<br><br>Bases (one or the other can be used depending on the weather)
+<ul>
+<li>(Base 1) A solar capture foldable module to use outdoors on sunny days (we were inspired by <a href="https://www.youtube.com/watch?v=Rk-9W_2nxiw">this design</a> for the foldable part —)</li>
+<li>(Base 2) An electric heating module for inside uses</li>
+</ul>
+
+<br>Top boxes
+<ul>
+<li>(D) A dehydrator module with drawers (drying racks) to place the food or plants that need to be dehydreated</li>
+<li>(I) An incubator module that can be placed on top on the dehydrator module</li>
+</ul>
+<br>Possible combinations:
+<ul>
+<li>Base 1 + D // Base 1 + I // Base 1 + D + I</li>
+<li>Base 2 + D // Base 2 + I // Base 2 + D + I</li>
+</ul>
+
+<br><strong>Functionning:</strong>
+Whether the base used is the solar or the electric one, we wanted to regulate the temperature and humidity indide.
+To do so, we will have temperature and humidity sensors in each of the two top boxes as well as fans that will be triggered each time one of the boxes reaches defined temperature and humidity levels.
+
+<br><br><strong>Team work:</strong>
+After agreeing on the general design and functionning, we divided the tasks and I was in charge with Fiorella to do the electronics part. The details of the steps we followed are all documented on the website (see link below).
+
+<br>The main challenges for this part were:
+<ul>
+<li>understand how to power all the different components with the right power supply,</li>
+<li>understand how the components I had never used before worked together and could be wired and programmed especially the relay and the Digital Temperature Humidity Sensor (we used a library to be able to read the sensor values),</li>
+<li>create the right logic diagram so the fans turn on when specific conditions are met in each of the two top boxes (dehydrator and incubator).</li>
+</ul>
+
+</div>
+
+        <div class="col-12 col-md-6">
+          <br><br>
+          <p><img src="images/term2/fabacademy/fab_challenge_2/hotboxes.jpg" alt="schematic hotbox" class="img-fluid"/></a></p>
+          <p><img src="images/term2/fabacademy/fab_challenge_2/hotbox_electronics.jpg" alt="electronics" class="img-fluid"/></a></p>
+
+
+        </div>
+
+        </div>
+
+
+
+
+
+        <div class="row">
+          <div class="col-12">
+          <br><br><strong>Overall experience:</strong>I  am a bit disappointed by the result of our work during this challenge. As we were a large group of 5 people, we wanted to complexify the project which went from a solar dehydrator to a solar/electrical/dehydrator/incubator! But in the end, doing this took much more time to design the boxes and we had more than a hundred pieces to cut with the CNC milling machine. We have not had time to cut on the Thursday so we could only cut our pieces on the last day Friday morning.
+
+            Even at this moment, the solar capture module (which for me was the most important regarding my research topic) was not part of the pieces being cut because of lack of space on the board. It was a bit of a lack of coordination in our team, if we had to do it again, we should have done only one of the two top boxes to gain space and design time and prioritize the core function of the object (MVP).
+
+            .As an alternative, we decided on Friday to cut the foldable solar capture drawer in thin plywood with the laser cutting machine.
+
+            <br><br>The fabrication processes, files of the design and code are all documented <a href="https://github.com/gerda-meleschkin/slowlab/blob/main/hydrid%20dehydrator%20-%20fab%20challenge%20%232/README_dehydrator.md">in this git repository</a> that links to a dedicated website.
+          </div>
+
+      </div>
+
+
+        <div class="row bg-light">
+          <div class="col-12 col-md-6">
+
+        </div>
+
+        <div class="col-12 col-md-6">
+
+
+        </div>
+      </div>
+      </div>
+
+
+
+    </div>
+
+    <br><br>
+    <div id="wcb" class="carbonbadge"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <br><br>
+
+    <footer>
+      <p></p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
