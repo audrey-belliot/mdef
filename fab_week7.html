@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>fabacademy w7</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+
+<body>
+<div class=bg-pink>
+      <div class="container">
+        <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="index.html">audrey</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="navbarContent" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="about.html">about</a></li>
+              <li class="nav-item"><a class="nav-link active" href="seminars.html">seminars</a></li>
+              <li class="nav-item"><a class="nav-link active" href="fabacademy.html">fabacademy</a></li>
+
+           </ul>
+           </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1>computer-controlled machining</h1>
+        <h2>fab academy week 7</h2>
+
+     </div>
+   </div>
+
+        <div class="row">
+        <div class="col-12">
+
+<br><br>
+This week we focused on another computer controlled machining technique : CNC Milling which is a substracting procedure (class content <a href="https://fablabbcn-projects.gitlab.io/learning/fabacademy-local-docs/material/week07/">here</a>).
+
+We often just refer to it as “CNC” but CNC stands for Computer Numerical Control so actually laser cutting is also CNC.
+
+<br>The important steps in this process are : designing for machining, preparing the file for cutting and cutting.
+
+We started with 2D-2,5D designs and it already enables us to create furniture.
+
+It is quite satisfying to be able to make something that is “human sized”!
+
+
+
+
+
+
+        </div>
+
+        <div class="col-12">
+
+
+        </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-9">
+            <h3>designing for machining</h3>
+
+            Before starting, I know I am not using the right words so from today, I will try to learn the exact words of wood joinery so I can stop saying “holes” and “piece of wood”. So in my case, I used <strong>“through tenon and mortise”</strong> joints. Mortise being the rectangle hole and tenon the tongue
+
+            <br>A lot of much cooler joints can be seen here for example <a href="https://www.archdaily.com/797107/50-downloadable-digital-joints-for-woodworking">here (downloadable digital joints for woodworkong)</a> or <a href="https://www.archdaily.com/796918/these-mesmerizing-gifs-illustrate-the-art-of-traditional-japanese-wood-joinery">here (traditional Japanese wood joinery)</a>
+
+            <br><br>To pursue on my low tech explorations, I decided to make a “fireless cooker” stool. Fireless cooking is a cooking method that requires a small amount of energy. Pots are heated on a stove until boiling point and then put in an isolated box to continue cooking without further energy input.
+
+            Though, having an extra box for it can be annoying in a kitchen so including it in a stool could be a nicer way to bring it to my kitchen.
+
+            <br><br>I used Fusion 360 and parametric functionnalities to design the stool. I started with the main box size that can change if we want to design it for smaller pots. But I did it so it could fit the biggest cooking pot I have.
+
+
+
+          </div>
+          <div class="col-12 col-md-3">
+            <p><br><br><img src="images/term2/fabacademy/fab_w7/joinery-1-2.jfif" alt="japanese joints" class="img-fluid"/></a>
+            <br><em>source <a href="https://twitter.com/TheJoinery_jp">The Joinery</a></em></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+
+          <p><br><br><img src="images/term2/fabacademy/fab_w7/designformilling.jpg" alt="design for milling" class="img-fluid"/></a>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="col-12 col-md-6">
+          <br><br><strong>joinery - T-bone, dog-bone, Mickey Mouse</strong>
+
+          <br>Because of the thickness of the endmill, we cannot have 90° angles in the design. So to make sure the joints fit well, I needed to modify their shape with either T-bone or dog-bone or mickey mouse shapes. I followed <a href="https://www.youtube.com/watch?v=fjrEmJeM-qw">this tutorial</a> to make T-bones in my joints.
+
+          <br><br><strong>kerf</strong>
+          <br>The kerf is the tool diameter but we can specify in the cutting settings if we want to cut inside, outside or on the vector. Even though, there is a tolerance of about 0.25mm because the material is pushed by the endmill and bouncess back a little bit.
+
+          So the design needs to be bigger : for the joints to fit, I can either make the tenons a bit bigger or the mortise a bit smaller.
+
+          <br><br>In my case, I had to do it in a second step in Rhino with and offset of 0.25mm for tenons because the way I designed the joints in Fusion didn’t allow me to do it there.
+
+          <br>The way I did it was: I designed the tenons first, and then used the “combine” functionnality to create the mortise holes is the other components. This works well but the consequence is that the tenons and mortise shapes are connected. So if I add a tolerance to the tenons, it changes the mortises size at the same time. So an alternative would be to draw the holes instead.
+          <br><br>When the design is ready, I export it to prepare the cutting settings in a different program.
+
+          I first layed all the components flat in Fusion by going to the “Manufacturing” menu and use the “Arrange” feature to automatically lay them flat. <a href="https://www.youtube.com/watch?v=jeQPJHHwVN4&t=77s">This video</a> can help to do it.
+
+          From there, create a new project and export the sketch in dxf.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>preparing the file for cutting</h3>
+        I opened the dxf file in Rhino to create different layers (this can also be done in Inkscape) and associate a color to each layer : blue for the outside cuts, and red for the inside (holes and pockets). Each layer is for a different cut.
+
+        <br><br>An easy program for the cutting settings is Easel but here we used Rhino Cam that we have at the fab lab. For each layer, we setup different functionnalities including:
+        <ul>
+        <li>spindle speed: here 18000 RPM (revolution per minute)</li>
+        <li>chip load : this can be found on the datasheet of the endmill and depends on the material we cut</li>
+        <li>feed rate is the cutting speed and can be calculated with a formula : chip load * flutes * RPM = 0.294*1*18000 = 5292 mm/min (values we used during the class)</li>
+        <li>cut depth : the maximum is half of the endmill diameter so 3mm here</li>
+        <li>cut path : inside, outside or on the line</li>
+        <li>options for holes : normal cut if we added tabs or screws, pocketing for smaller holes</li>
+        </ul>
+        A lot of these informations can be found in the datasheet of the endmill. The one we are using here is a down endmill of 6mm diameter.
+
+        <br><br>Note: the zero is on top of the material (top left corner of the box defined on Rhino Cam)
+
+        <br><br>The material will need to be screwed on the sacrificial board for it not to move during the cutting. A tip for the design is to plan in advance where the screws are going to be. We then have a layer just for the screws and we set up engraving their location in a separate file.
+        <h3>cutting</h3>
+        I followed these steps:
+<ul>
+<li>Place the material aligned to the left down corner</li>
+<li>Pick the right end mill, here we prepared a file for a 6mm down mill.</li>
+<li>Pick the collet for 6mm mills and clean it</li>
+<li>Attach the collet to the machine, place the end mill and tighten with the tools</li>
+<li>Open the program that goes with the machine here KinectiC-NC</li>
+<li>In "Jog/Setup" move the X and y to the origin point - when they are at the right position press zero to set them to these coordinates. Then use the magnetic tool to setup the z</li>
+<li>Put on protection! (Eyes and ears)</li>
+<li>Turn on the air aspiration</li>
+<li>In "Program", open the first g-code file for the screws and run it</li>
+<li>After the screw locations are engraved, move the end mill away from the material and place the screws</li>
+<li>Apply force and make sure to have the electric screwdriver aligned with the screw! For each screw, unscrew and screw again to make sure the material is flat on the base</li>
+<li>Setup the z again because it might have changed now that the mating is screwed</li>
+<li>In Program, open the g-code file for the cut and run it</li>
+</ul>
+
+
+</div>
+
+<div class="col-12 col-md-6">
+  <p><br><br><img src="images/term2/fabacademy/fab_w7/preparing_cutting.jpg" alt="preparing cutting" class="img-fluid"/></a>
+    <p><img src="images/term2/fabacademy/fab_w7/cutting.jpg" alt="cutting" class="img-fluid"/></a>
+    <p><img src="images/term2/fabacademy/fab_w7/cookerseat.jpg" alt="final result cooker seat" class="img-fluid"/></a>
+
+</div>
+</div>
+
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>assembling</h3>
+Remove the pieces from the board, unscrew the material, sand the pieces and assemble!
+<br><br>
+
+
+
+      </div>
+      <div class="col-12 col-md-6">
+
+      </div>
+          </div>
+
+
+    <div class="row">
+      <div class="col-12">
+
+
+      </div>
+</div>
+
+        <div class="row bg-light">
+          <div class="col-12 col-md-3">
+            <h3>tools I worked with</h3>
+            Fusion 360
+            <br>Rhino
+            <br>Rhino Cam
+            <br>Raptor x-SL 3200/S20
+            <br><br>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <h3>learnings</h3>
+<ul>
+  <li>Design the joints so kerf tolerance can be added in an easier way.</li>
+  <li>Plan in advance where the screws will be.</li>
+  <li>Make sure that all the components are in the same plan! If not, use “make 2D” command.</li>
+</ul>
+
+
+        </div>
+      </div>
+      </div>
+
+
+    </div>
+
+    <br><br>
+    <div id="wcb" class="carbonbadge"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <br><br>
+
+    <footer>
+      <p></p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
