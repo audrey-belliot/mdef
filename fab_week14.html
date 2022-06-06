@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>fabacademy w14</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+
+<body>
+<div class=bg-pink>
+      <div class="container">
+        <div class="row">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
+           <a class="navbar-brand" href="index.html">audrey</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           <div id="navbarContent" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="about.html">about</a></li>
+              <li class="nav-item"><a class="nav-link active" href="seminars.html">seminars</a></li>
+              <li class="nav-item"><a class="nav-link active" href="fabacademy.html">fabacademy</a></li>
+
+           </ul>
+           </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1>networking and communication</h1>
+        <h2>fab academy week 14</h2>
+
+     </div>
+   </div>
+
+        <div class="row">
+        <div class="col-12">
+
+<br><br>
+The class was about the different types of networks and the protocols that allow it.
+We discussed wired vs wireless communication and their modalities (serial vs parallel, synchronous vs asynchronous...).
+The content of this week is available <a href="https://fablabbcn-projects.gitlab.io/learning/fabacademy-local-docs/material/extras/networking/local/">here</a>.
+<br><br>For this task, I wanted to use wireless communication and send sensors reading from one microcontroller to another. I followed a tutorial to use ESP-NOW, a protocol developed by Espressif for communication without wifi (<a href="https://www.espressif.com/en/products/software/esp-now/overview">see here</a>).
+<br>I followed <a href="https://randomnerdtutorials.com/esp-now-two-way-communication-esp32/">this tutorial</a> for 2 way communication between two ESP32 microcontrollers.
+<br><br>In this tutorial, they are sending data from BME280 sensors between the two boards and displaying it on OLED screens. I modified the code as I used a DHT11 sensor that I had instead and no OLED screen, I displayed the messages sent on the monitor of Arduino IDE instead.
+
+<br><br>The first step was to get the microcontrollers MAC addresses by uploading some code and pressing the reset button.
+In my case, the two controllers I was using had the following codes: ESP1 =  3C:61:05:4B:05:C8 and ESP2 = 3C:61:05:48:D3:F8
+<br>It is useful to write them done and label them to then remember which one is which when starting to program them for communication.
+
+
+
+
+
+
+        </div>
+
+        <div class="col-12">
+
+
+        </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-7">
+
+<br><br>After that, I wired the DHT11 sensor to one of the boards. In the tutorial they wire a sensor to both controllers but in my case I just wanted to use one, a real life application would be that I could follow the temperature variations of a solar oven that I install on the rooftop without being always next to it so I can continue doing other things inside of the building. According to the specifications, ESP-NOW should support long distance communication even if separated by thick walls.
+
+<br>In the code, I changed all the references to variables of the sensor this tutorial was using to replace them by DHT11 variables and I commented al the parts that were refering to the OLED screen.
+<br>I created:
+<ul>
+  <li>one file for the controller with the sensor in which I had to indicate the MAC address of the other (receiver)</li>
+  <li>one file for the controller that was gonna receive the data in which I indicated the MAC address of the other (emitter in that case).</li>
+</ul>
+
+
+
+          </div>
+          <div class="col-12 col-md-5">
+          <br><br>
+            <p><img src="images/term2/fabacademy/fab_w14/networking_audrey.gif" alt="communication sensor" class="img-fluid"/></a>
+
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+
+
+          <br>After uploading the code to both controllers, I could read on the monitor of the receiver the temperature and humidity readings of the emitter. I tried to put it further by powering it with a battery and I could still receive the readings.
+
+          <br><br>Here are the two files with the code:
+          <br><a href="fabacademy\networking\RECEIVER_FAB">Sender with sensor</a>
+          <br><a href="fabacademy\networking\SENSOR_SENDER_FAB">Receiver</a>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+
+
+</div>
+
+<div class="col-12 col-md-6">
+
+</div>
+</div>
+
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+
+<br><br>
+
+
+
+      </div>
+      <div class="col-12 col-md-6">
+
+      </div>
+          </div>
+
+
+    <div class="row">
+      <div class="col-12">
+
+
+      </div>
+</div>
+
+        <div class="row bg-light">
+          <div class="col-12 col-md-3">
+            <h3>tools I worked with</h3>
+2 ESP32 microcontrollers
+<br>DHT11 temperature and humidity sensor
+<br>Breadboard and wires
+<br>Arduino IDE
+            <br><br>
+        </div>
+
+        <div class="col-12 col-md-9">
+
+
+
+        </div>
+      </div>
+      </div>
+
+
+    </div>
+
+    <br><br>
+    <div id="wcb" class="carbonbadge"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    <br><br>
+
+    <footer>
+      <p></p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
