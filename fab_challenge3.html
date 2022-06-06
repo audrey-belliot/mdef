@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <title>fabacademy c2</title>
+    <title>fabacademy c3</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
 
@@ -41,72 +41,56 @@
     <div class="row">
       <div class="col">
         <br>
-        <h1>making a solar dehydrator</h1>
-        <h2>fab academy micro challenge #2</h2>
+        <h1>making a thermometer</h1>
+        <h2>fab academy micro challenge #3</h2>
 
      </div>
    </div>
 
    <div class="row">
      <div class="col-12">
-       <br><br>The second challenge was to develop an artifact that “allows to explain our project to others” or “interact with others so they understand our research project”. We could use the skills from the previous fab academy classes including: 3D scanning and printing, electronics design, computer controlled machining (here CNC milling), embedded programming.
 
-     <br><br>To continue on the low tech exploration that we started with Gerda, we wanted to create a solar dehydrator to experiment with this method for food preservation without using energy. Julia and Fiorella had also started investigating about dehydrators but not solar and Roberto wanted to make an incubator.
 
-     <br><br>We decided to team up and make a hydrid object made of different boxes. We liked the idea of making a modular device and the multipurposes of the solar capture module.
 
-     <br>In the future, other people could create other projects that need solar heating for example and that could just be nested on top of the solar capture module. We could imagine a collection of these boxes, each having their own function and that could be used independently.
+
 
      </div>
    </div>
 
-        <div class="row">
-          <div class="col-12 col-md-6">
 
-<br><br><strong>Elements of the hydrid dehydrator/incubator</strong>
-
-<br><br>Bases (one or the other can be used depending on the weather)
-<ul>
-<li>(Base 1) A solar capture foldable module to use outdoors on sunny days (we were inspired by <a href="https://www.youtube.com/watch?v=Rk-9W_2nxiw">this design</a> for the foldable part —)</li>
-<li>(Base 2) An electric heating module for inside uses</li>
-</ul>
-
-<br>Top boxes
-<ul>
-<li>(D) A dehydrator module with drawers (drying racks) to place the food or plants that need to be dehydreated</li>
-<li>(I) An incubator module that can be placed on top on the dehydrator module</li>
-</ul>
-<br>Possible combinations:
-<ul>
-<li>Base 1 + D // Base 1 + I // Base 1 + D + I</li>
-<li>Base 2 + D // Base 2 + I // Base 2 + D + I</li>
-</ul>
-
-<br><strong>Functionning:</strong>
-Whether the base used is the solar or the electric one, we wanted to regulate the temperature and humidity indide.
-To do so, we will have temperature and humidity sensors in each of the two top boxes as well as fans that will be triggered each time one of the boxes reaches defined temperature and humidity levels.
-
-<br><br><strong>Team work:</strong>
-After agreeing on the general design and functionning, we divided the tasks and I was in charge with Fiorella to do the electronics part. The details of the steps we followed are all documented on the website (see link below).
-
-<br>The main challenges for this part were:
-<ul>
-<li>understand how to power all the different components with the right power supply,</li>
-<li>understand how the components I had never used before worked together and could be wired and programmed especially the relay and the Digital Temperature Humidity Sensor (we used a library to be able to read the sensor values),</li>
-<li>create the right logic diagram so the fans turn on when specific conditions are met in each of the two top boxes (dehydrator and incubator).</li>
-</ul>
-
-</div>
-
-        <div class="col-12 col-md-6">
-          <br><br>
-          <p><img src="images/term2/fabacademy/fab_challenge_2/hotboxes.jpg" alt="schematic hotbox" class="img-fluid"/></a></p>
-          <p><img src="images/term2/fabacademy/fab_challenge_2/hotbox_electronics.jpg" alt="electronics" class="img-fluid"/></a></p>
+   <div class="row">
+     <div class="col-12 col-md-7">
+       <br><br>For this 3rd challenge, I worked together with Gerda and Paula B. We wanted to make a thermometer for the solar ovens we are making for our Slow Lab project.
+       Beyond just thermometers, the idea was to have a interface to follow "live updates" of the temperature on a screen and a way to collect this data from different "solar oven owners" on a platform on which anyone could upload their data, compare the efficiency of their ovens, share tips about the design...in a similar way as Smart Citizen Kit platform shares sensors data.
 
 
-        </div>
+       <br><br>We split the work and I was mainly working on the electronics and programming part to program the output of "array" of LED (with a neopixel stripe) based on the temperature readings of our sensor. We started with a DHT11 that worked quite well but figured out that it couldn't reach very high temperatures so we had to change it for a thermistor that we had which are less precise.
+       We added a potentiometer to calibrate the readings of the thermistor. I was nice to see that it become a bit quicker and easier than before to take the steps of wiring components, looking for a library, adapting the code...
 
-        </div>
+       <br><br>For the digital interface, I worked on p5js which I connected to the ESP32 to display the temperature readings as well as a line showing the temperature evolution in time.
+       It could really be improved and I would like to find a way to have it as an app rather than working only when connected to my computer as in a real use case I would not be next to the oven with my laptop.
+
+       I didn't have time to work on the data collection for ad hoc analysis or upload on a platform so I will investigate on this outside of the challenge.
+
+       <br><br>The context of this challenge was a little bit particular for us as we had an event to prepare for the Sunday as part of our design interventions so we were in parallel continuing to build an oven and a stereo system that we would power with 12V solar panels.
+
+       <br><br>The details about the process and the files are available on our git repository <a href="https://github.com/gerda-meleschkin/slowlab/blob/main/thermometer%20-%20fabchallenge%20%233/README_thermometer.md">here</a>.
+
+
+     </div>
+
+     <div class="col-12 col-md-5">
+       <p><img src="images/term3/fabchallenge3/thermometer.gif" alt="thermometer" class="img-fluid"/></a></p>
+
+       <p><img src="images/term3/fabchallenge3/thermometer_p5.gif" alt="thermometer p5jS" class="img-fluid"/></a></p>
+
+
+     </div>
+
+
+ </div>
+
+
 
 
 
@@ -114,13 +98,6 @@ After agreeing on the general design and functionning, we divided the tasks and 
 
         <div class="row">
           <div class="col-12">
-          <br><br><strong>Overall experience:</strong>I  am a bit disappointed by the result of our work during this challenge. As we were a large group of 5 people, we wanted to complexify the project which went from a solar dehydrator to a solar/electrical/dehydrator/incubator! But in the end, doing this took much more time to design the boxes and we had more than a hundred pieces to cut with the CNC milling machine. We have not had time to cut on the Thursday so we could only cut our pieces on the last day Friday morning.
-
-            Even at this moment, the solar capture module (which for me was the most important regarding my research topic) was not part of the pieces being cut because of lack of space on the board. It was a bit of a lack of coordination in our team, if we had to do it again, we should have done only one of the two top boxes to gain space and design time and prioritize the core function of the object (MVP).
-
-            .As an alternative, we decided on Friday to cut the foldable solar capture drawer in thin plywood with the laser cutting machine.
-
-            <br><br>The fabrication processes, files of the design and code are all documented <a href="https://github.com/gerda-meleschkin/slowlab/blob/main/hydrid%20dehydrator%20-%20fab%20challenge%20%232/README_dehydrator.md">in this git repository</a> that links to a dedicated website.
           </div>
 
       </div>
@@ -140,7 +117,6 @@ After agreeing on the general design and functionning, we divided the tasks and 
 
 
 
-    </div>
 
     <br><br>
     <div id="wcb" class="carbonbadge"></div>
