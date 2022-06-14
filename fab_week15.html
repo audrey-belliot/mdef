@@ -49,9 +49,21 @@
 
         <div class="row">
         <div class="col-12">
+          <br><br>
+          For this task, I want to make a dashboard to monitor the efficiency of low tech appliances and use the collected data to improve it. As I already tested P5JS (personal tests and also for one of the fab challenges), I want here to make a dashboard using Node Red.
 
-<br><br>
 
+<br>
+<h3>tests with p5js</h3>
+Below are some examples of tests I did with p5js with user interaction either moving the mouse or clicking. I have been using the YouTube channel "The Coding Train" for this and it has been very helpful. A few people from the class were interested in this and we sometimes discuss it or share experiments in a dedicated whatsapp group that Jeremy created.
+<br><br><iframe src="https://editor.p5js.org/audrey-belliot/full/Sjc8rqofk" height="300"></iframe>
+<iframe src="https://editor.p5js.org/audrey-belliot/full/YSpWD6lYA" height="300"></iframe>
+<iframe src="https://editor.p5js.org/audrey-belliot/full/-66Xhnflx" height="300"></iframe>
+
+<h3>node-RED programming</h3>
+Node Red is an open source program that enables to make Graphic User Interfaces and that can be connected to external input or outputs.
+
+I want to display information collected by a temperature sensor connected to my ESP32.
 
 
 
@@ -65,31 +77,67 @@
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-7">
+          <div class="col-12 col-md-6">
+<br>
+<strong>installing Node-RED</strong>
+<br>I followed the manual on Node-RED website on how to get started: <a href="https://nodered.org/docs/getting-started/">here</a>.
+I went with the option of running it locally on my laptop.
+<br><br>The first thing to do is to install a version of Node.js. This was quite easy, after that you need to use the command line interface to install Node-RED locally.
+<br>This is when I started having the first issues and warnings (see screenshot on the right), after checking out some forums (<a href="https://stackoverflow.com/questions/72401421/npm-warn-config-global-global-local-are-deprecated-use-location-glo ">like this one</a>) and changing some of node.js files it finally seemed to work.
+<br>When this is done, you can start Node-RED by typing "$ node-red" in the command line. When you see something like <em>"[info] Server now running at http://127.0.0.1:1880/"</em> this is a good sign! You can copy the address of the server in your browser and start using Node-RED.
+
+<br><br>
+<strong>learning how to use it</strong>
+<br>I followed Node-RED tutorials to learn the basics on how to use it, connect nodes and display information in the debug monitor.
+<br><a href="https://nodered.org/docs/tutorials/first-flow">Tutorial 1 : Creating your first flow</a>
+<br><a href="https://nodered.org/docs/tutorials/second-flow">Tutorial 2 : Creating your second flow</a>
+
+<br><br>
+<strong>making dashboards</strong>
+<br>Dashboard nodes are not in Node-RED by default so I needed to install a "Dashboard palette". I followed this video tutorial to do it and learn how
+to make a first dashboard: <a href="https://www.youtube.com/watch?v=X8ustpkAJ-U">Node-Red Dashboard Tutorial</a>
+<br><br>I could custom the screen of the output and try different dashboard elements: text blocks, sliders, charts, gauges...
 
 
+<br><br>
+<strong>connecting the dashboard to my ESP32 microcontroller</strong>
+Before exploring more how to do this wireless, I first wanted to test it without sending the data to a “cloud” like Digital Ocean or to a Raspberry Pi so I found a tutorial to to it via a serial port so it will be my first step.
+<a href="https://www.youtube.com/watch?v=ryEFNy1E_LU">Tutorial "Using Arduino with Node-RED to create a Simple Web Dashboard"</a>
+<ul>
+<li>I first did a simple wiring of the DHT11 sensor that I have to my ESP32 microcontroller</li>
+<li>I installed nodes for serial connection</li>
+<li>I added the node “Serial In” and connect it to the port in which the ESP32 is connected.</li>
+<li>This enabled me to first display the values collected in a text node, the problem is that there were 4 values: 2 labels and 2 variables (temperature and humidity) so when I connected the serial input node to the gauge or chart ouput nothing was displayed. To solve this, I commented the values I didn’t need in the Arduino IDE code to only send the value of the temperature. I am sure there is another way but it was a quick fix and I managed to display temperature value on a gauge and its variation in time on a chart.</li>
+</ul>
+Note : Make sure the monitor is closed in Arduino IDE otherwise you won’t be able to read anything as the ports can only be connected to one output.
 
 
+<h3>conclusion</h3>
+Using Node-RED was very easy and intuitive, the most complicated so far was to install it at the beginning. It makes much more sense to me to use a tool like this rather than p5js for the kind of dashboards I want to make.
+<br>I see p5 more for artistic creations but maybe it is because I haven't explored it enought yet.
+<br><br>Now the next step would be to be able to save this data and make the system wireless. I will need to investigate on the MQTT protocol for this and see if I need other hardware to make it work.
 
           </div>
-          <div class="col-12 col-md-5">
-          <br><br>
+          <div class="col-12 col-md-6">
+
+          <p><img src="images/term3/fabacademy/install_nodered.jpg" alt="nodered" class="img-fluid"/></a>
+          <p><img src="images/term3/fabacademy/dashboard_nodered.jpg" alt="dashboard" class="img-fluid"/></a>
+          <p><img src="images/term3/fabacademy/final_dashboard.jpg" alt="dashboard" class="img-fluid"/></a>
 
 
         </div>
       </div>
 
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-md-2">
+        </div>
 
+        <div class="col-12 col-md-8">
+          <br><br>
+          <p><img src="images/term3/fabacademy/dashboard_audrey.webp" alt="dashboard" class="img-fluid" width="allowFullScreen" class="center"/></a>
+        </div>
 
-
-
-
-
-
-
-
+        <div class="col-12 col-md-2">
         </div>
 
     </div>
@@ -129,7 +177,11 @@
 
         <div class="row bg-light">
           <div class="col-12 col-md-3">
-
+            <h3>tools I worked with</h3>
+p5jS
+<br>Node-RED
+<br>Arduino IDE
+<br>ESP32 and DHT11 sensor
             <br><br>
         </div>
 

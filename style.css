@@ -68,3 +68,11 @@ em{
 
 hr {
   border: 4px solid pink;
+
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
